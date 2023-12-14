@@ -1,5 +1,5 @@
 from kickbase import app
-from kickbase.transfermarkt import liga, get_market
+from kickbase.transfermarkt import liga, get_transfermarket
 from kickbase.player import get_player_by_id
 from kickbase.myteam import get_lineup_players
 from kickbase.feed import liga, get_feed
@@ -12,7 +12,7 @@ def hello_world():
 
 @app.route('/market')
 def market():
-    return get_market(liga)
+    return get_transfermarket(liga)
 
 
 @app.route('/player/<player_id>')
